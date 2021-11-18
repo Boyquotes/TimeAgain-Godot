@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player/PlayerAnims.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Player/PlayerScript.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.731, 31.838 )
+
+[sub_resource type="Animation" id=2]
+
+[node name="Player" type="KinematicBody2D" groups=[
+"Player",
+]]
+collision_mask = 513
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.332308, 0.332308 )
+frames = ExtResource( 1 )
+animation = "Walk"
+frame = 2
+playing = true
+
+[node name="Collsion" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Walk = SubResource( 2 )
+
+[node name="GroundDetectNode" type="Node2D" parent="."]
+
+[node name="GroundDetectMiddle" type="RayCast2D" parent="GroundDetectNode"]
+enabled = true
+cast_to = Vector2( 0, 33 )
+collision_mask = 512
+
+[node name="GroundDetectRight" type="RayCast2D" parent="GroundDetectNode"]
+position = Vector2( 30, 0 )
+enabled = true
+cast_to = Vector2( 0, 33 )
+collision_mask = 512
+
+[node name="GroundDetectLeft" type="RayCast2D" parent="GroundDetectNode"]
+position = Vector2( -30, 0 )
+enabled = true
+cast_to = Vector2( 0, 33 )
+collision_mask = 512
+
+[node name="SidesDetect" type="Node2D" parent="."]
+
+[node name="Right" type="RayCast2D" parent="SidesDetect"]
+position = Vector2( 0, -18.6609 )
+rotation = -1.57079
+enabled = true
+cast_to = Vector2( 0, 32 )
+collision_mask = 512
+
+[node name="Left" type="RayCast2D" parent="SidesDetect"]
+position = Vector2( 0, -18.6609 )
+rotation = 1.57079
+enabled = true
+cast_to = Vector2( 0, 32 )
+collision_mask = 512

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Cruising_the_Night_Sky.ogg-31a11cc1d23a73193c4b11b0968b16ed.oggstr"
+
+[deps]
+
+source_file="res://Music/Cruising_the_Night_Sky.ogg"
+dest_files=[ "res://.import/Cruising_the_Night_Sky.ogg-31a11cc1d23a73193c4b11b0968b16ed.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

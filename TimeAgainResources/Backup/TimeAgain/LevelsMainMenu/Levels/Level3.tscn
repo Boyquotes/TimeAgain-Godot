@@ -1,0 +1,286 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://LevelsMainMenu/Design/Design1Cube.png" type="Texture" id=1]
+[ext_resource path="res://LevelsMainMenu/LevelScript.gd" type="Script" id=2]
+[ext_resource path="res://LevelsMainMenu/Design/Background2.png" type="Texture" id=3]
+[ext_resource path="res://LevelsMainMenu/Camera2D.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Checkpoint/Checkpoint.tscn" type="PackedScene" id=5]
+[ext_resource path="res://LevelsMainMenu/Finish/Finish.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player/StartPosition.tscn" type="PackedScene" id=7]
+[ext_resource path="res://LevelsMainMenu/Doors/Door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://LevelsMainMenu/Doors/Pressure.tscn" type="PackedScene" id=9]
+[ext_resource path="res://LevelsMainMenu/Doors/DoorHorizontal.tscn" type="PackedScene" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2682.08, 152.725 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 638.022, 623.672 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 638.022, 597.655 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 3752, 10 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Active"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 24.8974 ), Vector2( 0, -205.276 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 24.8974 ), Vector2( 0, -205.276 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 27.0589, 120.9 )
+
+[node name="LevelSpawn" type="Node2D"]
+position = Vector2( -242.726, -67.4238 )
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+motion_mirroring = Vector2( 1040, 0 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 1.3045, 1.13859 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="StartPosition" parent="." instance=ExtResource( 7 )]
+position = Vector2( -11.3517, 597.946 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 5 )]
+position = Vector2( 871.944, 412.125 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 4 )]
+position = Vector2( 404.034, 288 )
+XLimitRight = 3719
+XLimitLeft = 380
+ChangeScene = "Credits"
+
+[node name="Design" type="Node2D" parent="."]
+
+[node name="Design1Cube3" type="Sprite" parent="Design"]
+position = Vector2( 2561.49, -87.6547 )
+scale = Vector2( 19.2258, 1.09483 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem" type="KinematicBody2D" parent="Design/Design1Cube3" groups=[
+"Ground",
+]]
+scale = Vector2( 0.0520134, 0.913384 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube3/Kinem"]
+shape = SubResource( 1 )
+
+[node name="Design1Cube10" type="Sprite" parent="Design"]
+position = Vector2( 28.7277, 406.156 )
+scale = Vector2( 1.31354, 0.820859 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem" type="KinematicBody2D" parent="Design/Design1Cube10" groups=[
+"Ground",
+]]
+scale = Vector2( 0.0520134, 0.913384 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube10/Kinem"]
+shape = SubResource( 1 )
+
+[node name="Design1Cube11" type="Sprite" parent="Design"]
+position = Vector2( 871.706, 309.53 )
+scale = Vector2( 1.31354, 0.531225 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem" type="KinematicBody2D" parent="Design/Design1Cube11" groups=[
+"Ground",
+]]
+scale = Vector2( 0.0520134, 0.913384 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube11/Kinem"]
+shape = SubResource( 1 )
+
+[node name="Design1Cube14" type="Sprite" parent="Design"]
+position = Vector2( 834.243, 186.971 )
+rotation = 1.57079
+scale = Vector2( 0.370471, 0.179971 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem" type="KinematicBody2D" parent="Design/Design1Cube14" groups=[
+"Ground",
+]]
+scale = Vector2( 0.0520134, 0.913384 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube14/Kinem"]
+shape = SubResource( 1 )
+
+[node name="Design1Cube15" type="Sprite" parent="Design"]
+position = Vector2( 713.591, 115.059 )
+rotation = 1.57079
+scale = Vector2( 0.365813, 0.179971 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem" type="KinematicBody2D" parent="Design/Design1Cube15" groups=[
+"Ground",
+]]
+scale = Vector2( 0.0520134, 0.913384 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube15/Kinem"]
+shape = SubResource( 1 )
+
+[node name="Design1Cube13" type="Sprite" parent="Design"]
+position = Vector2( 1219.67, 575.553 )
+scale = Vector2( 1.31354, 4.40874 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem" type="KinematicBody2D" parent="Design/Design1Cube13" groups=[
+"Ground",
+]]
+scale = Vector2( 0.0520134, 0.913384 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube13/Kinem"]
+shape = SubResource( 1 )
+
+[node name="Design1Cube12" type="Sprite" parent="Design"]
+position = Vector2( 871.706, 811.9 )
+scale = Vector2( 1.31354, 2.00781 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem" type="KinematicBody2D" parent="Design/Design1Cube12" groups=[
+"Ground",
+]]
+scale = Vector2( 0.0520134, 0.913384 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube12/Kinem"]
+shape = SubResource( 1 )
+
+[node name="Design1Cube4" type="Sprite" parent="Design"]
+position = Vector2( -753.722, 379.549 )
+scale = Vector2( 4.57358, 4.28438 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem2" type="KinematicBody2D" parent="Design/Design1Cube4" groups=[
+"Ground",
+]]
+scale = Vector2( 0.218647, 0.233406 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube4/Kinem2"]
+shape = SubResource( 2 )
+
+[node name="Design1Cube5" type="Sprite" parent="Design"]
+position = Vector2( -122.206, 1260.92 )
+scale = Vector2( 2.42291, 4.28438 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Kinem2" type="KinematicBody2D" parent="Design/Design1Cube5" groups=[
+"Ground",
+]]
+scale = Vector2( 0.218647, 0.233406 )
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Design1Cube5/Kinem2"]
+shape = SubResource( 3 )
+
+[node name="Colliders" type="Node2D" parent="Design"]
+
+[node name="Death" type="KinematicBody2D" parent="Design/Colliders" groups=[
+"Death",
+]]
+collision_layer = 513
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Design/Colliders/Death"]
+position = Vector2( 3200.47, 759.257 )
+shape = SubResource( 4 )
+
+[node name="Finish" parent="." instance=ExtResource( 6 )]
+position = Vector2( 27.9809, 172.811 )
+
+[node name="Pressure1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 871.974, 526.303 )
+
+[node name="Pressure2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 943.786, 228.419 )
+
+[node name="Door2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 188.733, 148.011 )
+PressureName = "Pressure2"
+
+[node name="AnimationPlayer" parent="Door2" index="0"]
+anims/Active = SubResource( 5 )
+
+[node name="Sprite" parent="Door2" index="1"]
+position = Vector2( 0, 24.8974 )
+scale = Vector2( 0.193461, 0.86666 )
+
+[node name="CollisionShape2D" parent="Door2" index="2"]
+position = Vector2( 0, 24.8974 )
+shape = SubResource( 6 )
+
+[node name="Door1" parent="." instance=ExtResource( 10 )]
+position = Vector2( 443.031, 318.694 )
+PressureName = "Pressure1"
+
+[node name="Sprite" parent="Door1" index="1"]
+scale = Vector2( 0.193461, 1.7934 )
+
+[editable path="Door2"]
+
+[editable path="Door1"]

@@ -1,0 +1,144 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://LevelsMainMenu/Credits/CreditsTextFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://LevelsMainMenu/Credits/CreditsScript.gd" type="Script" id=2]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0021.png" type="Texture" id=3]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0019.png" type="Texture" id=4]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0017.png" type="Texture" id=5]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0018.png" type="Texture" id=6]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0025.png" type="Texture" id=7]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0005.png" type="Texture" id=8]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0008.png" type="Texture" id=9]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0010.png" type="Texture" id=10]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0026.png" type="Texture" id=11]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0012.png" type="Texture" id=12]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0015.png" type="Texture" id=13]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0016.png" type="Texture" id=14]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0004.png" type="Texture" id=15]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0022.png" type="Texture" id=16]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0024.png" type="Texture" id=17]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0020.png" type="Texture" id=18]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0029.png" type="Texture" id=19]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0030.png" type="Texture" id=20]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0009.png" type="Texture" id=21]
+[ext_resource path="res://LevelsMainMenu/Design/Background2.png" type="Texture" id=22]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0007.png" type="Texture" id=23]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0003.png" type="Texture" id=24]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0028.png" type="Texture" id=25]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0027.png" type="Texture" id=26]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0002.png" type="Texture" id=27]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0011.png" type="Texture" id=28]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0013.png" type="Texture" id=29]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0014.png" type="Texture" id=30]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0001.png" type="Texture" id=31]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0023.png" type="Texture" id=32]
+[ext_resource path="res://LevelsMainMenu/Tranistion/Transition-0006.png" type="Texture" id=33]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 7 ), ExtResource( 17 ), ExtResource( 32 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 18 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 12 ), ExtResource( 28 ), ExtResource( 10 ), ExtResource( 21 ), ExtResource( 9 ), ExtResource( 23 ), ExtResource( 33 ), ExtResource( 8 ), ExtResource( 15 ), ExtResource( 24 ), ExtResource( 27 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="LevelSpawn" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 22 )
+
+[node name="Title" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.097
+margin_bottom = -0.200001
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Title"]
+margin_top = 8.0
+margin_right = 800.0
+margin_bottom = 49.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Thank you for playing"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Music" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.997
+margin_top = 245.362
+margin_bottom = -311.838
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Music"]
+margin_right = 800.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "music:cruising the night sky"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Developer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.997
+margin_top = 154.725
+margin_bottom = -402.475
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Developer"]
+margin_right = 800.0
+margin_bottom = 41.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Developer:Konzu"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Transition" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Transition"]
+frames = SubResource( 1 )
+centered = false
+
+[node name="DestroySprite" type="Timer" parent="Transition"]
+wait_time = 1.6
+autostart = true
+[connection signal="timeout" from="Transition/DestroySprite" to="." method="_on_DestroySprite_timeout"]
